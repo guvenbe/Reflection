@@ -1,7 +1,10 @@
 package com.basicstrong.spring;
 
+import com.basicstrong.annotation.Component;
+
 import java.util.List;
 
+@Component
 public class ProductRepository {
     public List<Product> getPrice(List<Product> items) {
         for (Product product : items) {

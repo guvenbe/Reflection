@@ -1,10 +1,17 @@
 package com.basicstrong.spring;
 
+
+
+import com.basicstrong.annotation.Autowired;
+import com.basicstrong.annotation.Component;
+
 import java.util.List;
 
+@Component
 public class ProductService {
 
-    private ProductRepository repo = new ProductRepository();
+    @Autowired
+    private ProductRepository repo;
 
     public List<Product> getFinalPrice(List<Product> items){
         List<Product> list = repo.getPrice(items);
