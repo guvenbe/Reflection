@@ -101,7 +101,7 @@ class Employee {
     public String name();
 }
 
-class Person extends Employee implements Comparable<Person>, Serializable {
+class Person extends com.basicstrong.annotation.Employee implements Comparable<Person>, Serializable {
     public String name;
     public int age;
     private String privateName;
