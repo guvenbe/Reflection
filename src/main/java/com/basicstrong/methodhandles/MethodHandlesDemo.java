@@ -4,6 +4,7 @@ import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodHandles.Lookup;
 import java.lang.invoke.MethodType;
+import java.lang.invoke.VarHandle;
 
 public class MethodHandlesDemo {
     public static void main(String[] args) throws Throwable {
@@ -50,6 +51,13 @@ public class MethodHandlesDemo {
         System.out.println(findGetter.invoke(s1));
 
         //varHandles
-
+        //Atomic and concurrent
+        VarHandle courseVarHandle = privateLookupIn.findVarHandle(clss, "course", String.class);
+        String val = (String) courseVarHandle.get(s1);
+        System.out.println(val);
+        courseVarHandle.set(s1,"Kotlin");
+        String val2 = (String) courseVarHandle.get(s1);
+        System.out.println(val2);
     }
+
 }
