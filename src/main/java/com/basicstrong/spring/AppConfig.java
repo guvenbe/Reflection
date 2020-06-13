@@ -4,6 +4,6 @@ import com.basicstrong.annotation.ComponentScan;
 import com.basicstrong.annotation.Configuration;
 
 @Configuration
-@ComponentScan("com.basicsstrong.spring")
+@ComponentScan("com.basicstrong.spring")
 public class AppConfig {
 }
